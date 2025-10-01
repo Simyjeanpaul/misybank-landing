@@ -2,23 +2,14 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://votre-site.com/sitemap.xml
+Sitemap: https://simyjeanpaul.github.io/misybank-landing/sitemap.xml
 
 # Pages importantes
-Allow: /misy-bank
-Allow: /misy-bank/
+Allow: /
+Allow: /index.html
 
-# MisyBank Application
-Allow: http://misy-bank.193.203.169.18.nip.io/
-Allow: http://misy-bank.193.203.169.18.nip.io/account/
-Allow: http://misy-bank.193.203.169.18.nip.io/api/
-
-# Pages à ne pas indexer
-Disallow: /admin/
-Disallow: /api/v1/auth/
-Disallow: /api/v1/transactions/
-Disallow: /api/v1/comptes/
-Disallow: /api/v1/clients/
+# Fichiers de validation
+Allow: /googled38300ddbb55332a.html
 
 # Crawl-delay pour éviter la surcharge
 Crawl-delay: 1
