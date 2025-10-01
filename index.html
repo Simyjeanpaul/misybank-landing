@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MisyBank - Système de Gestion Bancaire Moderne | Banque en Ligne</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="MisyBank est une plateforme bancaire complète avec gestion des comptes, transactions, et API REST. Accédez à votre compte bancaire en ligne sécurisé avec MisyBank.">
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="misy-bank, banque en ligne, gestion bancaire, compte bancaire, transactions, API REST, système bancaire, fintech">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com/misy-bank">
+    <meta property="og:title" content="MisyBank - Système de Gestion Bancaire Moderne">
+    <meta property="og:description" content="Plateforme bancaire complète avec API REST et gestion des transactions sécurisées.">
+    <meta property="og:image" content="https://votre-site.com/images/misybank-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votre-site.com/misy-bank">
+    <meta property="twitter:title" content="MisyBank - Système de Gestion Bancaire Moderne">
+    <meta property="twitter:description" content="Plateforme bancaire complète avec API REST et gestion des transactions sécurisées.">
+    <meta property="twitter:image" content="https://votre-site.com/images/misybank-logo.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="MisyBank Team">
+    <meta name="language" content="French">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://votre-site.com/misy-bank">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fef7f7 0%, #ffffff 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ec4899;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem 0;
+            margin: 4rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ec4899;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* Links Section */
+        .links-section {
+            background: white;
+            padding: 3rem 0;
+            border-radius: 20px;
+            margin: 4rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .link-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .link-card:hover {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .link-card a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #ec4899;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-university"></i> MisyBank</h1>
+            <p>Votre système de gestion bancaire moderne et sécurisé</p>
+            <a href="http://misy-bank.193.203.169.18.nip.io/account/demande-creation-compte/" class="cta-button">
+                <i class="fas fa-user-plus"></i> Créer un compte
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Features -->
+            <section class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sécurité Avancée</h3>
+                    <p>Protection de vos données avec chiffrement de niveau bancaire et authentification multi-facteurs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Interface Moderne</h3>
+                    <p>Design responsive et intuitif accessible sur tous vos appareils (mobile, tablette, ordinateur).</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Transactions Rapides</h3>
+                    <p>Effectuez vos virements, dépôts et retraits en quelques clics avec notre interface optimisée.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics Complets</h3>
+                    <p>Suivez vos finances avec des tableaux de bord détaillés et des rapports personnalisés.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Cartes Visa</h3>
+                    <p>Gérez vos cartes bancaires, demandez des chéquiers et suivez vos relevés en temps réel.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>API REST</h3>
+                    <p>Intégration facile avec notre API REST complète pour les développeurs et partenaires.</p>
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>97</h3>
+                            <p>Endpoints API</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Sécurisé</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Disponible</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5</h3>
+                            <p>Modules</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links Section -->
+            <section class="links-section">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: 2rem; color: #333;">
+                        <i class="fas fa-link"></i> Accès Rapide
+                    </h2>
+                    <div class="links-grid">
+                        <div class="link-card">
+                            <i class="fas fa-home"></i>
+                            <a href="http://misy-bank.193.203.169.18.nip.io/">Page d'accueil</a>
+                        </div>
+                        <div class="link-card">
+                            <i class="fas fa-user-plus"></i>
+                            <a href="http://misy-bank.193.203.169.18.nip.io/account/demande-creation-compte/">Créer un compte</a>
+                        </div>
+                        <div class="link-card">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <a href="http://misy-bank.193.203.169.18.nip.io/login/">Se connecter</a>
+                        </div>
+                        <div class="link-card">
+                            <i class="fas fa-book"></i>
+                            <a href="http://misy-bank.193.203.169.18.nip.io/api/docs/">Documentation API</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>MisyBank</strong> - Système de Gestion Bancaire Moderne</p>
+            <p>Développé avec Django et déployé sur ArgoCD</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MisyBank",
+        "description": "Système de gestion bancaire moderne avec API REST",
+        "url": "http://misy-bank.193.203.169.18.nip.io/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "MisyBank Team"
+        }
+    }
+    </script>
+</body>
+</html>
