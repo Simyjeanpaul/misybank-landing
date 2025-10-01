@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://simyjeanpaul.github.io/misybank-landing/sitemap.xml
+Sitemap: https://simyjeanpaul.github.io/misybank-landing/sitemap.xml/
 
 # Pages importantes
 Allow: /
